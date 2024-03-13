@@ -2,9 +2,8 @@ import React from "react";
 import Slider from "../../components/slider/Slider";
 import "./single.scss";
 import { singlePostData, userData } from "../../lib/dummydata";
-
+import Map from "../../components/map/Map"
 const Single = () => {
-
   return (
     <div className="singlePage">
       <div className="details">
@@ -95,7 +94,9 @@ const Single = () => {
             </div>
           </div>
           <h1 className="title">Location</h1>
-          <div className="mapContainer">Map</div>
+          <div className="mapContainer">
+            <Map items={[singlePostData]} />
+          </div>
           <div className="buttons">
             <button>
               <img src="/chat.png" alt="" />
