@@ -5,6 +5,8 @@ import List from "./pages/list/List";
 import Layout from "./pages/Layout/Layout";
 import Single from "./pages/SinglePage/Single";
 import Profile from "./pages/Profile/Profile";
+import Signup from "./pages/Auth/Signup";
+import SignIn from "./pages/Auth/Signin";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -28,8 +30,11 @@ const App = () => {
           path: "/profile",
           element: <Profile />,
         },
+        { path: "/signup", element: <Signup /> },
+        { path: "/signin", element: <SignIn /> },
       ],
     },
+    // { path: "/signup", element: <Signup /> },
   ]);
 
   return <RouterProvider router={router} />;

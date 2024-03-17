@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-  const user = true;
+  const user = false;
   return (
     <nav>
       <div className="left">
@@ -34,8 +34,8 @@ const Navbar = () => {
           </div>
         ) : (
           <>
-            <a href="/">Sign in</a>
-            <a href="/" className="register">
+            <a href="/signin">Sign in</a>
+            <a href="/signup" className="register">
               Sign up
             </a>
           </>
@@ -44,12 +44,12 @@ const Navbar = () => {
           <img src={menu} alt="menu" onClick={() => setOpen(!open)} />
         </div>
         <div className={open ? "menu active" : "menu"}>
-          <a href="#/home">Home</a>
+          <a href="/">Home</a>
           <a href="#/about">About</a>
           <a href="#/content">Content</a>
           <a href="#/agents">Agents</a>
-          <a href="#/signin">Sign in</a>
-          <a href="signup">Sign up</a>
+          <a href="/signin">Sign in</a>
+          <a href="/signup">Sign up</a>
         </div>
       </div>
     </nav>

@@ -1,0 +1,74 @@
+@import "../../responsive.scss";
+
+.auth {
+  display: flex;
+  height: 100%;
+  .aboutContainer {
+    flex: 3;
+    .wrapper {
+      padding-right: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 50px;
+      height: 100%;
+
+      h1 {
+        font-size: 64px;
+      }
+      p {
+        font-size: 15px;
+      }
+    }
+    @include md {
+      display: none;
+    }
+  }
+  .formContainer {
+    flex: 2;
+    background-color: #fcf5f3;
+    border: none;
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      padding: 13px;
+
+      input {
+        border: none;
+        padding: 0px 10px;
+        height: 50px;
+      }
+      button {
+        transition: all 0.4s ease;
+        border: none;
+        cursor: pointer;
+        background-color: #fece51;
+        padding: 12px;
+        height: 50px;
+        width: 100px;
+
+        &:hover {
+          scale: 1.05;
+        }
+      }
+
+      span {
+        font-size: 19px;
+        text-align: center;
+        transition: all 0.4s ease;
+        &:hover {
+          scale: 1.05;
+          color: #fece51;
+        }
+      }
+    }
+  }
+  @include md {
+    background-color: #fcf5f3;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #a5a3a3;
+    border-radius: 50px;
+  }
+}
